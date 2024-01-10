@@ -1,28 +1,37 @@
-
-
-#### How to building tools for cargo [cargo-floki] (Floki the boat builder) ?
+#### How to building tools for multiple applications with cargo [cargo-floki] (Floki the boat builder) ?
+(You can have multiple outputs of multiple applications at the same time by executing a command.)
 
 Building a tool for managing the build process of multiple applications can be quite complex,
 and writing build tools in Rust involves creating a program that automates various tasks related to building,
-testing, and packaging your Rust projects. 
+testing, and packaging your Rust projects.
+
+#### How to install cargo :
+```bash
+$ cargo install --path .
+```
+
+##### Usage:
+```bash
+$  cargo floki --help
+```
 Below is a basic outline of how you might approach building such a tool:
 
-#### Define Project Structure:
+#### Project Structure:
 Create a standardized project structure to ensure consistency across different applications. This can simplify the build process by having a predictable layout.
+
+We have 2 project for my example:
+
 ```bash
 $ tree
 .
-├── app
+├── app (Project 1)
 │   ├── Cargo.toml
 │   └── src
-│       └── lib.rs
-└── client
+│       └── lib.rs  
+└── client (Project 2)
     ├── Cargo.toml
     └── src
         └── main.rs
-
-4 directories, 4 files
-
 ```
 #### Configuration:
 Allow for configuration options so users can customize the build process for their specific needs.
@@ -77,9 +86,5 @@ Let's create a simple build tool that cleans, build, testing the project directo
 ```bash
 $ cargo floki build
 ```
-##### Usage:
-You can have multiple outputs at the same time by executing a command.
 
-Install with: `cargo install --path .`
-
-Get help: `cargo floki --help`
+All these steps are for ease of work and speed of application development.
