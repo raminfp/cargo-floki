@@ -1,0 +1,7 @@
+[floki]
+# # Optional. Defaults to 'app'
+ main_service = "floki_projects/app"
+
+# # Optional. Defaults to 'client'
+ client_service = "floki_projects/client"
+
