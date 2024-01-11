@@ -66,12 +66,8 @@ I define project path `app` and `client` and generate `floki.toml` :
 $ cargo floki init
 $ cat floki.toml 
 [floki]
-# # Optional. Defaults to 'app'
- main_service = "floki_projects/app"
-
-# # Optional. Defaults to 'client'
- client_service = "floki_projects/client"
-
+main_service = "floki_projects/app"
+client_service = "floki_projects/client"
 ```
 #### Logging and Reporting:
 Implement logging and reporting features to provide detailed feedback during the build process. This helps developers identify and fix issues more efficiently.
