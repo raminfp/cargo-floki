@@ -1,6 +1,6 @@
 
 <p align="center">
-  <img src="image.png" alt="Image Description">
+  <img src="https://github.com/raminfp/cargo-floki/blob/main/img/floki.jpg" alt="Image Description">
 </p>
 
 #### How to write your building tools for multiple applications with cargo [cargo-floki]
