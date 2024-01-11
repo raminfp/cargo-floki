@@ -72,22 +72,8 @@ client_service = "floki_projects/client"
 #### Logging and Reporting:
 Implement logging and reporting features to provide detailed feedback during the build process. This helps developers identify and fix issues more efficiently.
 
-```rust
-fn setup_logging(verbose: u8) {
-    let log_level = match verbose {
-        0 => LevelFilter::Warn,
-        1 => LevelFilter::Info,
-        2 => LevelFilter::Debug,
-        _ => LevelFilter::Trace,
-    };
-    let config = ConfigBuilder::default()
-        .set_time_level(LevelFilter::Off)
-        .build();
-    TermLogger::init(log_level, config, TerminalMode::Stderr, ColorChoice::Auto)
-        .expect("Failed to start logger");
-    log::info!("Log level set to: {log_level}");
-}
-
+```bash
+$ cargo floki -v build
 ```
 
 #### Testing:
