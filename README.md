@@ -10,7 +10,7 @@ Building a tool for managing the build process of multiple applications can be q
 and writing build tools in Rust involves creating a program that automates various tasks related to building,
 testing, and packaging your Rust projects.
 
-#### How to install cargo :
+#### How to install cargo-floki :
 ```bash
 $ cargo install --path .
 ```
@@ -138,6 +138,7 @@ Ensure compatibility with popular CI/CD systems like Jenkins, Travis CI, GitLab 
 Build all projects that cleans, build, testing the project directory.
 ```bash
 $ cargo floki build
+$ cargo floki -r build
 $ cargo floki clean
 $ cargo floki update
 ```
